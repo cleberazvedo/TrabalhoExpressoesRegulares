@@ -1,0 +1,78 @@
+* {
+    text-decoration: none;
+    font-family: Verdana;
+
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(5, 5, 82);
+
+}
+
+.box {
+    width: 600px;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+p {
+    font-weight: bold;
+    color: darkblue;
+}
+
+label {
+    font-size: 10px;
+    color: #0b0286;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+}
+
+.aviso {
+    color: red;
+    font-size: 14px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.visivel {
+    display: block;
+}
+
+span {
+    color: black;
+    font-weight: lighter;
+}
+
+input[type="button"],input[type="reset"] {
+    margin-top: 17px;
+    height: 23px;
+    font-size: 11px;
+    background-color: rgb(130, 183, 243);
+    color: black;
+    border: 0;
+    box-shadow: rgb(5, 5, 82) 4px 3px;
+    transform-box: initial;
+    
+
+}
+
+input[type="button"]:active,input[type="reset"]:active {
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    background-color: rgb(5, 5, 82);
+    color: white;
+    border:0;
+    margin-bottom: 5px;
+    box-shadow: rgb(5, 5, 82) 0px 0px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <script src="jwifi.js"></script>
+    <script>
+        function verificar(){
+        var info = document.getElementById("txtInfo").value;
+        var padrao1 = /\d\d\d/;// Padrão para validar ao menos 3 números em sequência
+        var padrao2 = /\w\w/; // Padrao para validar ao menos 2 caracteres alfanumericos (nro e/ou letra) 
+        var padrao3 = /^\d\d\d/; // Padrao para validar uma sequencia de caracteres iniciando por 3 números
+        var padrao4 = /\d\d\d$/; // Padrao para validar uma sequencia de caracteres finalizando por 3 números
+        var padrao5 = /^\d\d\d$/; // Padrao para validar uma sequencia de caracteres contendo exatamente 3 números
+        var padrao6 = /^\d\s\d\d$/; // Padrao para validar uma sequencia contendo exatamente 3 numeros, sendo que apos ao primeiro numero deve haver um espaco branco
+        var padrao7 = /^\d.\d\d$/; // Padrao para validar uma sequencia contendo exatamente 3 numeros, sendo que apos o primeiro numero deve haver qualquer caracter, exceto uma quebra de linha
+        var padrao8 = /^\d{3,}$/;  // Padrao para validar sequencia com exatamento no minímo 3 números ou digitos
+        var padrao9 = /^\d{3,5}$/; // Padrao para validar sequencia com exatamento no minímo 3 números ou digitos e no máximo 5 numeros ou digitos
+        var padrao10 = /^\d{3}$/; // Padrao para validar sequencia com exatamento  3 números ou digitos
+        var padrao11 = /^\w\d{0,1}$/; //Padrao para validar uma sequencia contendo exatamente 2 caracteres, sendo que o primeiro deve ser uma letra ou numero e o segundo número opcional
+        var padrao12 = /^\w\d?$/; //Padrao identico ao anterior, porem escrito de uma forma diferente (foi utilizado o quantificador ?)
+        var padrao13 = /^\d+$/; // Padrao para validar uma sequencia contendo minimo 1 numero
+        var padrao14 = /^\d*$/; // Padrao para validar uma sequencia vazia ou contendo no minimo 1 ou mais digitos
+        var padrao15 = /^\d{2}\.\d{3}-\d{3}$/ // Padrao para validar CEP
+        var padrao16 = /^\d{3}\.\d{3}.\d{3}-\d{2}$/ // Padrao para validar CPF
+        var padrao17 = /^MT-\d{5}$/; // Nesse exemplo, os caracteres MT- foram utilizados juntamente com metacaracteres e um quantificador
+        var padrao17 = /^MT-\d{5}$/i; // Nesse exemplo, os caracteres MT- foram utilizados juntamente com metacaracteres e um quantificado. OBS: as letras MT poderao ser maiusculas ou minusculas, porque foi utilizado o modificador i apos a expressao regular.
+        var padrao17 = /^(MT-|IFTM-)?\d{5}$/i; // Valida um padrao iniciando com MT- ou IFTM- (Letras maiusculas ou minusculas) seguido de 5 números
+
+        var padrao = padrao17;
+
+        if (padrao.test(info))
+            alert("OK");
+        else
+            alert("Erro");
+    }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <label for="txtInfo">Informação</label>
+        <input type="text" id="txtInfo" onKeyPress="inserirMascara('txtInfo','xx-xxxxx')">
+        <input type="button" value="Validar" onclick="verificar()">
+        <input type="reset" value="Limpar">
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <script type="text/javascript" src="js/jwifi.js"></script>
+    <script type="text/javascript" src="js/funcao.js"></script>
+    <link rel="stylesheet" href="css/restom.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>VALIDAÇÃO EXPRESSÕES REGULARES</h1>
+    <div class="box">
+        <form action="">
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtDataNascimento">Data de Nascimento</label>
+                    <input type="text" id="txtDataNascimento">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarDataNascimento()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtCpf">CPF</label>
+                    <input type="text" id="txtCpf" onKeyPress="inserirMascara('txtInfo','xxx.xxx.xxx-xx')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarCpf()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtMatricula">Número de Matricula de um aluno</label>
+                    <input type="text" id="txtMatricula">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarMatricula()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtDisciplina">Código de uma disciplina do IFTM (Versão 1)</label>
+                    <input type="text" id="txtDisciplina" onKeyPress="inserirMascara('txtDisciplina','MT-xx.xxx-IFTM')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarDisciplina1()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtDisciplina2">Código de uma disciplina do IFTM (Versão 2)</label>
+                    <input type="text" id="txtDisciplina2">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarDisciplina2()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtDisciplina3">Código de uma disciplina do IFTM (Versão 3)</label>
+                    <input type="text" id="txtDisciplina3" onKeyPress="inserirMascara('txtDisciplina3','MT-xx.xxx-IFTM')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarDisciplina3()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtDisciplina4">Código de uma disciplina do IFTM (Versão 4)</label>
+                    <input type="text" id="txtDisciplina4" onKeyPress="inserirMascara('txtDisciplina4','MT-xx.xxx-IFTM Y')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarDisciplina4()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtTelefone">Telefone (Versão 1)</label>
+                    <input type="text" id="txtTelefone" onKeyPress="inserirMascara('txtTelefone','+yy(xx)xxxxx-xxxx')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarTelefone1()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtTelefone2">Telefone (Versão 2)</label>
+                    <input type="text" id="txtTelefone2">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarTelefone2()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtFaturamentoAnual">Faturamento Anual de uma empresa</label>
+                    <input type="text" id="txtFaturamentoAnual">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarFaturamentoAnual()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtCronometro">Cronômetro</label>
+                    <input type="text" id="txtCronometro" onKeyPress="inserirMascara('txtCronometro','HH:MM:SS:CC')">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarCronometro()">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-6 col-dg-6">
+                    <label for="txtSenha">Senha</label>
+                    <input type="text" id="txtSenha">
+                </div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="button" value="Validar" onclick="validarSenha()">
+                </div>
+            </div>
+            <br>
+            <div class="linha">
+                <div class="col-dm-3 col-dg-3"></div>
+                <div class="col-dm-6 col-dg-6">
+                    <input type="reset" value="Limpar">
+                </div>
+                <div class="col-dm-3 col-dg-3"></div>
+            </div>
+</body>
+
+</html>
